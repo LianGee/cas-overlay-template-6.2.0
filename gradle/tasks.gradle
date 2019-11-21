@@ -21,7 +21,6 @@ apply plugin: "de.undercouch.download"
 
 def tomcatDirectory = "${buildDir}/apache-tomcat-${tomcatVersion}"
 project.ext."tomcatDirectory" = tomcatDirectory
-
 def explodedDir="${buildDir}/cas"
 def explodedResourcesDir="${buildDir}/cas-resources"
 def resourceJarName = "cas-server-webapp-resources"
@@ -175,7 +174,7 @@ task createKeystore(group: "build", description: "Create CAS keystore") {
 
         def keystorePath = "/etc/cas/thekeystore"
 
-        def dn = "CN=cas.example.org,OU=Example,OU=Org,C=US"
+        def dn = "CN=cas.sse.com.cn,OU=sse,OU=cn,C=CN"
         if (project.hasProperty("certificateDn")) {
             dn = project.getProperty("certificateDn")
         }
